@@ -3,7 +3,7 @@ class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
 
   def index
-    @addresss = @location.addresses
+    @addresses = @location.addresses
   end
 
   def show
@@ -42,11 +42,11 @@ class AddressesController < ApplicationController
   private
 
   def set_location
-    @location = location.find(params[:location_id])
+    @location = Location.find(params[:location_id])
   end
 
   def set_address
-    @address = address.find(params[:id])
+    @address = Address.find(params[:id])
   end
 
   def address_params
