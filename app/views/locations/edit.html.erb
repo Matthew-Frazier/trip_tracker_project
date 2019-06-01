@@ -1,2 +1,10 @@
-<h1>Locations#edit</h1>
-<p>Find me in app/views/locations/edit.html.erb</p>
+<h1 class= "ui header centered">Edit Location</h1>
+<hr />
+<%= render partial: "form", location: @location %>
+<br>
+<button type="button" class="btn btn-outline-primary btn-sm">
+<%= link_to "show", trip_location_path(@trip, @location) %>
+</button>
+<button type="button" class="btn btn-outline-primary btn-sm">
+<%= link_to "Back", trip_locations_path(@trip)%>
+</button>
