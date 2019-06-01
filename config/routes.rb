@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "trips#index"
+  root "static_pages#home"
 
   resources :trips do
     resources :locations
