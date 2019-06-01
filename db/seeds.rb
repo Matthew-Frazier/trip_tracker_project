@@ -24,7 +24,7 @@
         trip_id: trip.id
       )
 
-      3.times do
+      1.times do
         address = Address.create(
           name: Faker::Company.bs,
           street: Faker::Address.street_address,
