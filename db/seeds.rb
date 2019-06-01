@@ -9,28 +9,28 @@
   4.times do 
     trip = Trip.create(
     title: Faker::Movies::HitchhikersGuideToTheGalaxy.planet,
-    people:   ,
-    stops:         ,
-    transportation: 
+    people:Faker::Movies::HitchhikersGuideToTheGalaxy.character,
+    stops: "something",
+    transportation: Faker::Movies::HitchhikersGuideToTheGalaxy.starship,
     user_id: user.id
     )
 
     4.times do
       location = Location.create(
         name: Faker::Company.industry,
-        attraction:
-        rating:
-        note:
+        attraction: Faker::Restaurant.name,
+        rating: Faker::SlackEmoji.food_and_drink,
+        note: Faker::Movies::HitchhikersGuideToTheGalaxy.quote,
         trip_id: trip.id
       )
 
       3.times do
         address = Address.create(
           name: Faker::Company.bs,
-          street:
-          city:
-          state:
-          zip:
+          street: Faker::Address.street_address,
+          city: Faker::Address.city,
+          state: Faker::Address.state,
+          zip: Faker::Address.zip_code,
           location_id: location.id
         )
       end
