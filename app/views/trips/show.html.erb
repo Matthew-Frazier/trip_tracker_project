@@ -1,2 +1,31 @@
-<h1>Trips#show</h1>
-<p>Find me in app/views/trips/show.html.erb</p>
+<div class="ui centered card">
+  <div class="image">
+     <img src="https://picsum.photos/200"/>
+    </div>
+    <div class="content">
+      <p class="header">
+      <%= @trip.title %> 
+    </p>
+</div>
+</div>
+<hr />
+<br />
+
+<div class= "ui centered grid">
+  <% @trip.locations.each do |location| %>
+   <ol class="ui list">
+    <div class="four wide column">
+     <li> <%= location.name %> <%= location.attraction %>  </li></div>
+     </ol>
+   </div>
+  <%end%>
+</div>
+<br />
+<br />
+<div class="ui buttons">
+<button class= "ui positive basic button"><%= link_to 'Edit List', edit_trip_path(@trip) %></button>
+<div class= "or"></div>
+<button class= "ui positive basic button"><%= link_to 'Add location', new_location_path(@trip) %></button>
+
+</div>
+<button class= "ui green right floated basic button"><%= link_to 'Back', trips_path %></button>
