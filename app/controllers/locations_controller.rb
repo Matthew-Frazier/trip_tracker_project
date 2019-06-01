@@ -11,20 +11,12 @@ class LocationsController < ApplicationController
 
   def new
     @location = @trip.locations.new
-<<<<<<< HEAD
-   
-=======
->>>>>>> 7ff2d00d3795794f18fd37accbb58f56d8e5516a
   end
 
   def edit
   end
 
   def create
-<<<<<<< HEAD
-   
-=======
->>>>>>> 7ff2d00d3795794f18fd37accbb58f56d8e5516a
     @location = @trip.locations.new(location_params)
     if @location.save
       redirect_to 
@@ -49,11 +41,7 @@ class LocationsController < ApplicationController
   private
 
   def set_trip
-<<<<<<< HEAD
-   @trip = Trip.find(params[:trip_id])
-=======
-    @trip = Trip.find(params[:trip_id])
->>>>>>> 7ff2d00d3795794f18fd37accbb58f56d8e5516a
+    @trip = Trip.find(params[:id])
   end
 
   def set_location

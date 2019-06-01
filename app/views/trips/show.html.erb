@@ -15,7 +15,7 @@
   <% @trip.locations.each do |location| %>
    <ol class="ui list">
     <div class="four wide column">
-     <li> <%= location.name %> <%= location.attraction %>  </li></div>
+     <li> <%= link_to "#{location.name}", trip_location_path(@trip, location) %> <%= location.attraction %>  </li></div>
      </ol>
    </div>
   <%end%>
