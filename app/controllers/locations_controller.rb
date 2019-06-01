@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  before_action :set_trip, only: [:index, :new, :create]
+  before_action :set_trip, only: [ :index, :new, :create]
   before_action :set_trip1, only: [:show, :edit, :update, :destroy]
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
@@ -42,15 +42,11 @@ class LocationsController < ApplicationController
   private
 
   def set_trip
-<<<<<<< HEAD
-    @trip = Trip.find(params[:id])
-=======
     @trip = Trip.find(params[:trip_id])
   end
 
   def set_trip1
     @trip1 = Trip.find(params[:id])
->>>>>>> 40cdfb7679a5a8b15fccd23facf04c0cc617fa79
   end
 
   def set_location
