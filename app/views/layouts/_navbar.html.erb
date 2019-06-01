@@ -1,34 +1,22 @@
-<div>
-<% if current_user %>
-  <button class="ui black button">
-    <%= link_to "Home", root_path %>
-  </button>
-  <button class="ui green button">
+<nav class="ui menu">
+  <button class="ui button">
     <%= link_to "Trips", trips_path %>
   </button>
-  <div>
-    Logged In |
-    <button class="ui yellow basic button"
-      <%= link_to "Edit User", edit_user_registration_path %>
-    </button>
-    <div class="ui right menu">
-      <button class="ui red basic button"
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-      </button>
-    </div>
-  </div>
-<% else %>
-  <button class="ui black button">
-    <%= link_to "Home", root_path %>
+  <button class="ui button">
+    <%= link_to "Add Trip", new_trip_path%>
   </button>
-  <div>
-    <button class="ui blue basic button">
-      <%= link_to 'Sign Up', new_user_registration_path %>
+  <div class="right menu">
+   <% if current_user %>
+    <button class="ui button">
+      <%= link_to "Logout", destroy_user_session_path, method: :delete%>
     </button>
-    or
-    <button class="ui orange basic button">
-      <%= link_to 'Log In', new_user_session_path %>
+   <% else %>
+    <button class="ui button"
+     <%= link_to "Register", new_user_registration_path%>
     </button>
+    <button class="ui button">
+     <%= link_to "Login", new_user_session_path%>
+    </button>
+   <% end %>
   </div>
-<% end %>
-</div>
+</nav>
