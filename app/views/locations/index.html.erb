@@ -15,7 +15,7 @@
         </div>
         <div class="extra content">
            <div class="ui three buttons">
-             <button class= "ui blue basic button"><%= link_to 'Edit', edit_location_path(location) %></button>
+             <button class= "ui blue basic button"><%= link_to 'Edit', edit_trip_location_path(@trip, location) %></button>
               <div class= 'or'></div>
               <button class= "ui green basic button"><%= link_to 'View Address', location_addresses_path(location) %></button>
               <div class= 'or'></div>
