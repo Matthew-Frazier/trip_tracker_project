@@ -1,2 +1,10 @@
-<h1>Trips#edit</h1>
-<p>Find me in app/views/trips/edit.html.erb</p>
+<h1 class= "ui header centered">Edit Trip</h1>
+<hr />
+<%= render "form", trip: @trip %>
+<br>
+<button type="button" class="btn btn-outline-primary btn-sm">
+<%= link_to "show", trip_path(@trip) %>
+</button>
+<button type="button" class="btn btn-outline-primary btn-sm">
+<%= link_to "Back", trips_path %>
+</button>
