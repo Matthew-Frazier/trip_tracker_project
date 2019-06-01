@@ -1,0 +1,20 @@
+<%= form_with(model: [@location, @address], local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Name of Location", autofocus: true %>
+    
+    <%= f.label :street %>
+    <%= f.text_field :street, required: true, placeholder: "Street Address", autofocus: true %>
+  
+    <%= f.label :city %>
+    <%= f.text_field :city, required: true, placeholder: "City", autofocus: true %>
+    
+    <%= f.label :state %>
+    <%= f.text_field :state, required: true, placeholder: "State", autofocus: true %>
+
+    <%= f.label :zip %>
+    <%= f.text_field :zip, required: true, placeholder: "Zip Code", autofocus: true %>
+
+    <%= f.submit nil, class: "ui-button"%>
+  </div>
+<% end %>
