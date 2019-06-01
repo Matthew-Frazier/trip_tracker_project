@@ -5,16 +5,13 @@
   <button class="ui button">
     <%= link_to "Add Trip", new_trip_path%>
   </button>
-  <button class="ui button">
-    <%= link_to "Locations", trip_locations_path %>
-  </button>
   <div class="right menu">
    <% if current_user %>
     <button class="ui button">
       <%= link_to "Logout", destroy_user_session_path, method: :delete%>
     </button>
    <% else %>
-    <button class="ui button"
+    <button class="ui button">
      <%= link_to "Register", new_user_registration_path%>
     </button>
     <button class="ui button">
