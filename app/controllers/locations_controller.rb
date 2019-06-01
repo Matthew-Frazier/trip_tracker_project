@@ -42,14 +42,13 @@ class LocationsController < ApplicationController
   private
 
   def set_trip
-    @trip = current_user.trips.find(params[:trip_id])
+    @trip = Trip.find(params[:trip_id])
   end
 
   def set_location
     @location = Location.find(params[:id])
   end
-
-  def location_params
+ def location_params
     params.require(:location).permit(:name, :attraction, :rating, :note)
   end
 end

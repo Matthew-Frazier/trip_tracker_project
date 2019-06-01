@@ -11,13 +11,13 @@
           <img src="https://picsum.photos/200"/>
         </div>
         <div class="content">
-           <%= link_to " #{trip.title}", trip_path(trip), class: " ui header centered" %>
+           <%= link_to "#{trip.title}", trip_path(trip), class: " ui header centered" %>
         </div>
         <div class="extra content">
            <div class="ui three buttons">
              <button class= "ui blue basic button"><%= link_to 'Edit', edit_trip_path(trip) %></button>
               <div class= 'or'></div>
-              <button class= "ui green basic button"><%= link_to 'View Location', trip_locations_path(trip) %></button>
+              <button class= "ui green basic button"><%= link_to 'View Locations', trip_locations_path(@trip) %></button>
               <div class= 'or'></div>
               <button class="ui red basic button"><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></button>
             </div>

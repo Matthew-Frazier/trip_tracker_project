@@ -1,7 +1,7 @@
 <h1 class="ui header centered">Locations</h1>
-<%= link_to 'New location', new_location_path %>
+<%= link_to 'New location', new_trip_location_path(@trip)%>
 <div class="ui divider"></div>
-<h2>Welcome <%# current_user.first_name %></h2>
+<h2>Welcome <%= current_user.first_name %></h2>
 <br />
 <div class="ui grid">
   <% @locations.each do |location| %>
