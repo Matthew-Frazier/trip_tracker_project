@@ -11,14 +11,12 @@ class LocationsController < ApplicationController
 
   def new
     @location = @trip.locations.new
-    binding.pry
   end
 
   def edit
   end
 
   def create
-    binding.pry
     @location = @trip.locations.new(location_params)
     if @location.save
       redirect_to 
@@ -43,7 +41,6 @@ class LocationsController < ApplicationController
   private
 
   def set_trip
-    binding.pry
     @trip = Trip.find(params[:trip_id])
   end
 
