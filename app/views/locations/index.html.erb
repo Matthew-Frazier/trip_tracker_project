@@ -1,2 +1,28 @@
-<h1>Locations#index</h1>
-<p>Find me in app/views/locations/index.html.erb</p>
+<h1 class="ui header centered">Locations</h1>
+<%= link_to 'New location', new_location_path %>
+<div class="ui divider"></div>
+<h2>Welcome <%# current_user.first_name %></h2>
+<br />
+<div class="ui grid">
+  <% @locations.each do |location| %>
+    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+      <div class="ui card">
+        <div class="image">
+          <img src="https://picsum.photos/200/300"/>
+        </div>
+        <div class="content">
+           <%= link_to " #{location.name}", location_path(location), class: "ui header centered" %>
+        </div>
+        <div class="extra content">
+           <div class="ui three buttons">
+             <button class= "ui blue basic button"><%= link_to 'Edit', edit_location_path(location) %></button>
+              <div class= 'or'></div>
+              <button class= "ui green basic button"><%= link_to 'View Address', location_addresses_path(location) %></button>
+              <div class= 'or'></div>
+              <button class="ui red basic button"><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
