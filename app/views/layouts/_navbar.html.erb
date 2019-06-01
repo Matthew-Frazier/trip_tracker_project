@@ -5,6 +5,9 @@
   <button class="ui button">
     <%= link_to "Add Trip", new_trip_path%>
   </button>
+  <button class="ui button">
+    <%= link_to "Locations", locations_path(@location)%>
+  </button>
   <div class="right menu">
    <% if current_user %>
     <button class="ui button">

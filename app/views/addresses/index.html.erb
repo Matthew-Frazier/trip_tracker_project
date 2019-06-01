@@ -11,15 +11,15 @@
           <img src="https://picsum.photos/200/300"/>
         </div>
         <div class="content">
-           <%= link_to " #{address.name}", location_address_path(address), class: "ui header centered" %>
+           <%= link_to " #{address.name}", location_address_path(@location, address), class: "ui header centered" %>
         </div>
         <div class="extra content">
            <div class="ui three buttons">
-             <button class= "ui blue basic button"><%= link_to 'Edit Address', edit_location_address_path(location) %></button>
+             <button class= "ui blue basic button"><%= link_to 'Edit Address', edit_location_address_path(@location, address) %></button>
               <div class= 'or'></div>
-              <button class= "ui green basic button"><%= link_to 'View Address', location_addresses_path(location) %></button>
+              <button class= "ui green basic button"><%= link_to 'View Address', location_address_path(@location, address) %></button>
               <div class= 'or'></div>
-              <button class="ui red basic button"><%= link_to 'Destroy', location_address_path, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+              <button class="ui red basic button"><%= link_to 'Destroy', location_address_path(@location, address), method: :delete, data: { confirm: 'Are you sure?' } %></button>
             </div>
         </div>
       </div>
