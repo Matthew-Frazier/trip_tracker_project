@@ -11,7 +11,7 @@
           <img src="https://picsum.photos/200/300"/>
         </div>
         <div class="content">
-           <%= link_to " #{location.name}", location_path(location), class: "ui header centered" %>
+           <%= link_to " #{location.name}", trip_location_path(@trip, location), class: "ui header centered" %>
         </div>
         <div class="extra content">
            <div class="ui three buttons">
