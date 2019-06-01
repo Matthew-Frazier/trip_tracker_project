@@ -1,0 +1,17 @@
+<div>
+<% if current_user %>
+  <%= link_to "Home", root_path %>
+  <div>
+    Logged In |
+    <%= link_to "Edit User", edit_user_registration_path %>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+  </div>
+<% else %>
+  <%= link_to "Home", root_path %>
+  <div>
+    <%= link_to 'Sign Up', new_user_registration_path %>
+    or
+    <%= link_to 'Log In', new_user_session_path %>
+  </div>
+<% end %>
+</div>
