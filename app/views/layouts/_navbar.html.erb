@@ -3,14 +3,19 @@
   <button class="ui black button">
     <%= link_to "Home", root_path %>
   </button>
+  <button class="ui green button">
+    <%= link_to "Trips", trips_path %>
+  </button>
   <div>
     Logged In |
     <button class="ui yellow basic button"
       <%= link_to "Edit User", edit_user_registration_path %>
     </button>
-    <button class="ui red basic button"
-      <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-    </button>
+    <div class="ui right menu">
+      <button class="ui red basic button"
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      </button>
+    </div>
   </div>
 <% else %>
   <button class="ui black button">
